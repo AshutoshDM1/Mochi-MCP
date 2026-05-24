@@ -10,6 +10,14 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshutoshDM1/Mochi-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AshutoshDM1/Mochi-MCP/issues"
+  },
+  "homepage": "https://github.com/AshutoshDM1/Mochi-MCP#readme",
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean --minify --dts",
     "dev": "tsx src/index.ts",

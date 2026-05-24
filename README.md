@@ -1,6 +1,7 @@
-# 🌐 Mochi MCP
-
 <div align="center">
+
+### Mochi MCP
+
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-1.29.0-FF4B91.svg?style=for-the-badge&logo=modelcontextprotocol)](https://modelcontextprotocol.io/)
@@ -10,10 +11,53 @@
 **A premium, modular Model Context Protocol (MCP) server for the Mochi website uptime and monitoring suite.**  
 *Equip your AI assistants in Cursor and Antigravity IDE with real-time website checks, intervals, active latency, and uptime reports.*
 
-[Features](#-key-features) • [Quick Start](#-quick-start) • [Architecture](#-modular-architecture) • [Tools](#-mcp-tools-exposed) • [IDE Configuration](#-ide-integration)
+[Install](#install-it-locally) • [Run](#run-it) • [IDE Integration](#ide-integration-manual) • [Features](#-key-features) • [Tools](#-mcp-tools-exposed) • [Architecture](#-modular-architecture) • [Developer Guide](#-developer-guide)
 
 </div>
 
+---
+
+## Install It Locally
+
+```bash
+bun install -g mochi-mcp-kit
+```
+
+## Run It 
+
+```bash
+mochi-mcp login
+```
+
+---
+
+## IDE Integration (Manual)
+
+If you prefer to configure your workspace manually, simply update your settings:
+
+> [!IMPORTANT]
+> **Cursor Configuration Open there settings/config folder**
+
+### Configuration Snippet
+Add this snippet inside the `"mcpServers"` object in either of the files:
+```json
+{
+  "mcpServers": {
+    "mochi": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mochi-mcp-kit"
+      ],
+      "env": {
+        "MOCHI_API_KEY": "mochi_pat_xxxxxxxx", // create from mochi.elitedev.space
+        "DOTENV_CONFIG_QUIET": "true", // (optional) add in antigravity 
+        "DOTENVX_LOG": "error" // (optional) add in antigravity 
+      }
+    }
+  }
+}
+```
 ---
 
 ## ⚡ Key Features
@@ -24,6 +68,7 @@
 *   **🔑 Smart Configuration Fallbacks**: Leverages `conf` secure stores while maintaining seamless fallback checks across environment variables and legacy `.mochirc` configurations.
 
 ---
+
 
 ## 🗺️ System Flow
 
@@ -136,35 +181,6 @@ pnpm run dev
 Bundles and minifies TypeScript using `tsup`:
 ```bash
 pnpm run build
-```
-
----
-
-## 🤖 IDE Integration (Manual)
-
-If you prefer to configure your workspace manually, simply update your settings:
-
-> [!IMPORTANT]
-> **Cursor Configuration Paths:**
-> - **Windows**: `%APPDATA%\Cursor\User\globalStorage\moe.polymath.vscsublime\mcp_config.json`
-> - **macOS**: `~/Library/Application Support/Cursor/User/globalStorage/moe.polymath.vscsublime/mcp_config.json`
-> - **Linux**: `~/.config/Cursor/User/globalStorage/moe.polymath.vscsublime/mcp_config.json`
-
-> [!IMPORTANT]
-> **Antigravity IDE Configuration Path:**
-> - `~/.gemini/antigravity-ide/mcp_config.json`
-
-### Configuration Snippet
-Add this snippet inside the `"mcpServers"` object in either of the files:
-```json
-{
-  "mcpServers": {
-    "mochi": {
-      "command": "npx",
-      "args": ["-y", "mochi-mcp-kit"]
-    }
-  }
-}
 ```
 
 ---
