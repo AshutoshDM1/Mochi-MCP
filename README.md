@@ -5,7 +5,7 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-1.29.0-FF4B91.svg?style=for-the-badge&logo=modelcontextprotocol)](https://modelcontextprotocol.io/)
-[![NPM Version](https://img.shields.io/npm/v/mochi-mcp-kit.svg?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/mochi-mcp-kit)
+[![NPM Version](https://img.shields.io/npm/v/@AshutoshDM1/mochi-mcp-kit.svg?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/@AshutoshDM1/mochi-mcp-kit)
 [![Package Manager](https://img.shields.io/badge/pnpm-10.3-orange.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 [![Code Style](https://img.shields.io/badge/Style-Modular-purple.svg?style=for-the-badge)](https://github.com/)
 
@@ -21,7 +21,7 @@
 ## Install It Locally
 
 ```bash
-bun install -g mochi-mcp-kit
+bun install -g @AshutoshDM1/mochi-mcp-kit
 ```
 
 ## Run It 
@@ -48,7 +48,7 @@ Add this snippet inside the `"mcpServers"` object in either of the files:
       "command": "npx",
       "args": [
         "-y",
-        "mochi-mcp-kit"
+        "@AshutoshDM1/mochi-mcp-kit"
       ],
       "env": {
         "MOCHI_API_KEY": "mochi_pat_xxxxxxxx", // create from mochi.elitedev.space

@@ -1,11 +1,14 @@
 {
-  "name": "mochi-mcp-kit",
+  "name": "@AshutoshDM1/mochi-mcp-kit",
   "version": "1.5.1",
   "description": "Local MCP server for Mochi website monitoring suite",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
     "mochi-mcp": "dist/index.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
